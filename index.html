@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer Portfolio</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        /* Custom styles can be added here */
+        /* Animating gradient background */
+        @keyframes animatedBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .bg-pattern {
+            background: linear-gradient(45deg,#f75cd0, #4a00e0, #8e2de2, #ff4e50, #f9d423);
+            background-size: 400% 400%;
+            animation: animatedBackground 10s ease infinite;
+        }
+
+        /* Style for custom section headers */
+        .section-header:before {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #f6ad55;
+            margin-bottom: 15px;
+        }
+
+        /* Style for hover effects on project cards */
+        .project-card {
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Style for form inputs and buttons */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            border-color: #e2e8f0;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #f6ad55;
+            outline: none;
+        }
+
+        .btn {
+            background-color: #f6ad55;
+            color: #ffffff;
+            border-color: #f6ad55;
+        }
+
+        .btn:hover {
+            background-color: #ed8936;
+            border-color: #ed8936;
+        }
+
+        /* Additional custom styles */
+        .glow-text {
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Custom Header Styles */
+        .header-content {
+            background-color: #4a00e0;
+            color: #ffffff;
+            padding: 10% 10%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #6B02B6, #4a00e0);
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content .btn {
+            background-color: #f6ad55;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content .btn:hover {
+            background-color: #ed8936;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="header-content bg-pattern">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4">Sepen Varun</h1>
+            <p class="text-lg md:text-xl lg:text-2xl mb-6">Software Engineer | Java Developer</p>
+            <p class="text-base md:text-lg mb-8">Building scalable solutions with Java, Spring Boot, and Hibernate.</p>
+            <a href="#projects"
+                class="btn text-white py-3 px-8 md:py-4 md:px-10 rounded-full uppercase tracking-wide font-semibold shadow-md inline-block hover:shadow-lg transition duration-200">View
+                Projects</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8">
+
+        <!-- About Me Section -->
+        <section id="about" class="container mx-auto mt-8">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold section-header">About Me</h2>
+                <p class="text-gray-700 leading-relaxed">I am a software engineer with 1 year of experience in Java development. I am
+                    passionate about creating efficient and scalable software solutions.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container mx-auto mt-8">
+            <h2 class="text-3xl font-bold section-header mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project cards -->
+                <div class="bg-white rounded-lg shadow-md p-6 project-card transition duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2">Online Bookstore Web Application</h3>
+                    <p class="text-gray-700">Developed an online bookstore web application where users can browse, search, and purchase books. The application allows administrators to manage inventory, orders, and user accounts.</p>
+                    <p class="text-gray-500 mt-2">Technologies used: Java, Spring Boot, css, html and Tailwind css</p>
+                    <a href="project.html" class="text-blue-500 mt-4 inline-block hover:underline">View Project</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 project-card transition duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2">Online Event Management System</h3>
+                    <p class="text-gray-700">Developed an online event management system that allows users to browse upcoming events, register for events, and manage their registrations. Administrators can create, update, and delete events, manage user registrations, and generate reports.</p>
+                    <p class="text-gray-500 mt-2">Technologies used: Java, Hibernate, Tailwind CSS, CSS and HTML</p>
+                    <a href="project2.html" class="text-blue-500 mt-4 inline-block hover:underline">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact" class="container mx-auto mt-8">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold section-header mb-4">Contact Me</h2>
+                <form action="#" class="max-w-md">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name"
+                            class="border-2 border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:border-green-500"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="border-2 border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:border-green-500"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                        <textarea id="message" name="message"
+                            class="border-2 border-gray-300 rounded-md px-3 py-2 w-full h-32 resize-none focus:outline-none focus:border-green-500"
+                            required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="btn text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-200">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-4">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Sepen Varun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optional: Add JavaScript for interactivity -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
